@@ -13,23 +13,14 @@ import (
 func main() {
 	fmt.Println("checking git repositories...")
 
-	//git_directory := "C:/Users/Steven/Documents/GitCloneDerAllerEchte"
-
 	file, err := os.Open("dirs.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	reader := bufio.NewReader(file)
-	/*file_content, err := reader.ReadString('\n')
-	if err != nil {
-		log.Fatal(err)
-	}
-	file_content = file_content[:len(file_content)-2]
-	*/
 
 	var directories []string
-
 	for {
 		file_content, err := reader.ReadString('\n')
 		if err != nil {
